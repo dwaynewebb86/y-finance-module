@@ -18,36 +18,26 @@ Example
 
 import yfinance as yf
 
-dat = yf.Ticker("MSFT")
+# Define the ticker symbol
+ticker_symbol = "AAPL"
 
-One ticker symbol
------------------
-dat = yf.Ticker("MSFT")
+# Create a Ticker object
+ticker = yf.Ticker(ticker_symbol)
 
-dat.info
+# Fetch historical market data
+historical_data = ticker.history(period="1y")  # data for the last year
+print("Historical Data:")
+print(historical_data)
 
-dat.calendar
+# Fetch basic financials
+financials = ticker.financials
+print("\nFinancials:")
+print(financials)
 
-dat.analyst_price_targets
+# Fetch stock actions like dividends and splits
+actions = ticker.actions
+print("\nStock Actions:")
+print(actions)
 
-dat.quarterly_income_stmt
+Output
 
-dat.history(period='1mo')
-
-dat.option_chain(dat.options[0]).calls
-
-Multiple ticker symbols
------------------------
-tickers = yf.Tickers('MSFT AAPL GOOG')
-
-tickers.tickers['MSFT'].info
-
-yf.download(['MSFT', 'AAPL', 'GOOG'], period='1mo')
-
-Funds
------
-spy = yf.Ticker('SPY').funds_data
-
-spy.description
-
-spy.top_holdings
