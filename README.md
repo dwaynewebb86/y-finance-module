@@ -40,4 +40,4 @@ print("\nStock Actions:")
 print(actions)
 
 Output
-
+https://github.com/dwaynewebb86/y-finance-module/blob/a733fb28472953c33ae3bcd8d44a5f6143bafe5f/yfinance.png
