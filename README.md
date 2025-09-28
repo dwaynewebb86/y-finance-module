@@ -3,6 +3,8 @@ The Y Finance Module is a financial module used to fetch financial and market da
 
 This repository shows the installation of the 'yfinance' module
 
+Link: [https://pypi.org/project/yfinance/](url)
+
 Install Steps
 -------------
 Y Finance is a non-standard library and requires manual installation
